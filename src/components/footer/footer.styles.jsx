@@ -26,6 +26,10 @@ export const Item = styled.div`
   height: 100%;
   width: 100%;
 
+  @media only screen and (max-width:767px){
+    display: none;
+  }
+
 
 `;
 

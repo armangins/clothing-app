@@ -18,7 +18,8 @@ import {
   NavBarLink,
   NavBarLinkExtended,
   MobileMenuToggle,
-  NavBarLinkExtend
+  NavBarLinkExtend,
+  AuthIcon
 } from "./navbar.styles.jsx";
 
 /**
@@ -100,7 +101,7 @@ const Navbar = () => {
               </NavBarLinkExtend>
             ) : (
               <NavBarLinkExtend to="/auth">
-                <img style={{ width: "20px" }} src={UserIcon} alt="" />
+                <AuthIcon  src={UserIcon} alt="" />
               </NavBarLinkExtend>
             )}
 
@@ -111,7 +112,7 @@ const Navbar = () => {
           <ExtendedContainer>
             {menusItems.map(({ title, id, url }) => {
               return (
-                <NavBarLinkExtended key={id} to={url}>
+                <NavBarLinkExtended onClick={handleMenuToggle} key={id} to={url}>
                   {title}
                 </NavBarLinkExtended>
               );

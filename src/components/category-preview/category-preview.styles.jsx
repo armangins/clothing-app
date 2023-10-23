@@ -38,5 +38,5 @@ export const LinkWrapper = styled(Link)`
   color: black;
 `;
 export const Span = styled.span`
-  text-decoration: underline;
+
 `;

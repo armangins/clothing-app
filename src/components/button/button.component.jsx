@@ -1,5 +1,5 @@
 import React from "react";
-import { BaseButton, InvertedButton } from "./button.styles";
+import { BaseButton, InvertedButton,GoogleButton } from "./button.styles";
 
 /**
  * Button component
@@ -17,11 +17,14 @@ import { BaseButton, InvertedButton } from "./button.styles";
 export const BUTTON_TYPE_CLASS = {
   base: 'base',
   inverted: 'inverted',
+  googleButton: 'googleButton',
 }
 
 const getButton = (buttonType = BUTTON_TYPE_CLASS.base) => ({
   [BUTTON_TYPE_CLASS.base] : BaseButton,
   [BUTTON_TYPE_CLASS.inverted] : InvertedButton,
+  [BUTTON_TYPE_CLASS.googleButton] : GoogleButton,
+
 }[buttonType])
 
   

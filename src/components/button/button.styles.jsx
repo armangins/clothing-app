@@ -14,7 +14,7 @@ export const BaseButton = styled.button`
   font-weight: 600;
 
   &:hover {
-    transform: scale(1.02);
+    /* transform: scale(1.02); */
     background-color: whitesmoke;
     color: black;
     border: 1px solid transparent;
@@ -30,3 +30,9 @@ export const InvertedButton = styled(BaseButton)`
   border: 1px solid white;
   transition: 0.3s ease-in-out 0s;
 `;
+
+export const GoogleButton = styled(BaseButton)`
+  background-color: #4285F4 ;
+  border: 1px solid #4285F4 ;
+;
+`

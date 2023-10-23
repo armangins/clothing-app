@@ -9,9 +9,9 @@ const CategoryPreview = ({ title, products }) => {
     <Container >
       <Title>
         <LinkWrapper to={title} >
-        Go To 
+       see whats in 
         <Span> {title}  </Span>
-        →
+   
         </LinkWrapper>
       </Title>
       <PreviewContainer >

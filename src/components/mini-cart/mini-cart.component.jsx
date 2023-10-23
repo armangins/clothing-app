@@ -83,7 +83,7 @@ const CartDropDown = () => {
       <>
     
           {cartProducts.length ? (
-            <Link to="checkout">
+            <Link onClick={toggleCartDropdown} to="checkout">
               <Button width="100%" ButtonType="primary_button">CHECKOUT</Button>
             </Link>
           ) : (

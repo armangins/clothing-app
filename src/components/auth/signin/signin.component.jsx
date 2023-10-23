@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Button from "../../button/button.component";
+import Button, { BUTTON_TYPE_CLASS } from "../../button/button.component";
 import InputField from "../../input/input.component";
 
 import {
@@ -67,14 +67,14 @@ const Signin = () => {
     } catch (error) {
       switch (error.code) {
         case "auth/wrong-password":
-          toast.error("wrong email/password", {
-            position: toast.POSITION.TOP_RIGHT,
-          });
+          // toast.error("wrong email/password", {
+          //   position: toast.POSITION.TOP_RIGHT,
+          // });
           break;
         case "auth/user-not-found":
-          toast.error("account doesnt exist", {
-            position: toast.POSITION.TOP_RIGHT,
-          });
+          // toast.error("account doesnt exist", {
+          //   position: toast.POSITION.TOP_RIGHT,
+          // });
           break;
         default:
           break;
@@ -111,7 +111,7 @@ const Signin = () => {
        
               <Button 
                 type="button"
-                ButtonType="provider_button"
+                buttonType={BUTTON_TYPE_CLASS.googleButton}
                 onClick={logGoogleUser}
               >
                 sign in with
@@ -119,7 +119,7 @@ const Signin = () => {
                   <FontAwesomeIcon icon={faGoogle} />
                 </span>
               </Button>
-              <Button type="submit" ButtonType="primary_button">
+              <Button type="submit" ButtonType="base">
                 login
               </Button>
               <p>

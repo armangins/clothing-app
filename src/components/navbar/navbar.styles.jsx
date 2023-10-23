@@ -126,4 +126,12 @@ export const MobileMenuToggle = styled.img`
   @media only screen and (max-width:767px){
     display: block;
   }
+
+
+`
+
+export const AuthIcon = styled.img`
+  
+  width: 18px;
+  margin-top: 2px;
 `
