@@ -1,0 +1,56 @@
+$breakpoint: (
+  "xs": "max-width: 575.98px",
+  "sm": "(min-width: 575.98px) and (max-width:767.98px)",
+  "md": "(min-width: 767.98px) and (max-width:1024px)",
+  "lg": "(min-width:1024px) and (max-width:1199.98px)",
+  "xl": "(min-width: 1199.98px) and (max-width:1399.98px)",
+  "xll": "min-width: 1440px",
+);
+
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  src: url(../../../public/fonts/Montserrat-Regular.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  src: url(../../../public/fonts/Montserrat-SemiBold.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  src: url(../../../public/fonts/Montserrat-Bold.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 900;
+  line-height: 20px;
+  src: url(../../../public/fonts/Montserrat-Black.ttf) format("truetype");
+}
+
+/* Add more @font-face rules for other styles and weights as needed */
+@mixin font-styles($font) {
+  font-family: map-get($font, family);
+  font-size: map-get($font, size);
+  font-weight: map-get($font, weight);
+}
+
+@mixin breakpoint($value) {
+  $map: map-get($breakpoint, $value);
+
+  @if map {
+    @media (#{$map}) {
+      @content;
+    }
+  }
+}
+
+
