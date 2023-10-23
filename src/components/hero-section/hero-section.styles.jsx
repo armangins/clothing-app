@@ -21,6 +21,7 @@ export const Container = styled.div`
   @media only screen and (max-width: 767px) {
     font-size: 28px;
     width: 100%;
+    height: 70vh;
   }
 `;
 

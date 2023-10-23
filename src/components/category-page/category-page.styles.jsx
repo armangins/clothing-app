@@ -1,4 +1,4 @@
-import styled from "styled-components";
+  import styled from "styled-components";
 
 export const CategoryPreviewContainer = styled.div`
   margin-top: 5%;
@@ -17,10 +17,12 @@ export const PreviewContainer = styled.div`
   row-gap: 90px;
   width: 100%;
 
-  @media only screen and (max-with: 767px) {
+  @media only screen and (max-width:767px){
+    display: grid;
     column-gap: 5px;
-    row-gap: 5px;
+    row-gap: 90px;
     grid-template-columns: repeat(2, 1fr);
-    padding-bottom: 20%;
+    padding: 0% 5% 35% 5%;
   }
+
 `;
